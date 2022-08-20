@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Get SCM') {
             steps {
-                git "https://github.com/Elad0109/simple-webapp-nodejs-.git"
+                git branch: "main', url: 'https://github.com/Elad0109/simple-webapp-nodejs-.git"
                 sh "cat Jenkinsfile"
             }
         }
