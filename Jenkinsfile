@@ -12,7 +12,6 @@ pipeline {
         stage('clone git') {
             steps {
                 git branch: 'main', url: 'https://github.com/Elad0109/simple-webapp-nodejs-.git'
-                sh "cat Jenkinsfile"
             }
         }
         stage('build') {
@@ -28,3 +27,7 @@ pipeline {
                 sh "docker kill nodesamplespp"
                 sh "docker rm nodesamplespp"
                 sh "docker run -itd --name nodesamplespp -p 3000:3000 nodesamplespp:latest &"
+            }
+        }
+    }
+}
