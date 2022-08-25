@@ -7,6 +7,7 @@ pipeline {
             steps {
                 // Clean before build
                 cleanWs()
+                echo "helloooooo"
             }
         }
         stage('clone git') {
